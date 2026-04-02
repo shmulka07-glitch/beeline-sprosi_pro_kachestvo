@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Есть вопросы по качеству?</title>
+    <meta
+      name="description"
+      content="Справочник по стандартам качества оценки диалогов: задайте вопрос и получите краткий ответ со ссылкой на источник."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#chat">Перейти к чату</a>
+
+    <main class="page">
+      <img class="beeline" src="./beeline.png" alt="Билайн" />
+      <div class="wrap page__inner">
+        <header class="mast">
+          <button id="themeToggle" class="themeToggle" type="button" aria-label="Переключить тему">
+            Тёмная тема
+          </button>
+          <h1 class="mast__title">ЕСТЬ ВОПРОСЫ ПО КАЧЕСТВУ?</h1>
+        </header>
+
+        <section class="pane" aria-label="Ваш вопрос">
+          <form id="askForm" class="pane__inner pane__inner--row" autocomplete="off">
+            <label class="field field--grow" for="question">
+              <span class="field__label">Ваш вопрос</span>
+              <input
+                id="question"
+                class="field__input"
+                type="text"
+                placeholder="Например: Как я могу подать апелляцию?"
+                required
+              />
+            </label>
+
+            <button id="send" class="btn btn--primary" type="submit">Отправить вопрос</button>
+          </form>
+        </section>
+
+        <section class="pane" aria-label="Ответ">
+          <div class="pane__inner">
+            <div id="answerBox" class="answerBox" aria-live="polite"></div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
